@@ -14,27 +14,27 @@
 
 // downToOne(13)
 
-var palen = [];
-function largestPalin(){
-    for (var i = 583; i <1000; i++){
-        for(var j = 583; j<1000;j++){
-            var k = i * j;
-            var stringK = k.toString();
-            var reverseK = stringK.split('').reverse().join('');
-            if (reverseK == stringK){
-                palen.push(k);
-            }
+// var palen = [];
+// function largestPalin(){
+//     for (var i = 583; i <1000; i++){
+//         for(var j = 583; j<1000;j++){
+//             var k = i * j;
+//             var stringK = k.toString();
+//             var reverseK = stringK.split('').reverse().join('');
+//             if (reverseK == stringK){
+//                 palen.push(k);
+//             }
 
-        }
+//         }
 
-    }
-    return Math.max.apply(null, palen)
-    // return palen
-}
+//     }
+//     return Math.max.apply(null, palen)
+//     // return palen
+// }
 
 // console.log(palen[palen.length-1])
 
-console.log(largestPalin())
+// console.log(largestPalin())
 
 // var check = true;
 // var count = 2520;
@@ -63,3 +63,23 @@ console.log(largestPalin())
 //     }
 // }
 // }
+
+var check1 = true;
+var num = 2520;
+var i = 2
+
+while(check1){
+    while(i < 21){
+        if (num % i != 0){
+            num ++;
+            i = 2;
+            break;
+        } else {
+            i++
+            if(i==20){
+                console.log(num)
+                check1 = false
+            }
+        }
+    }
+}
